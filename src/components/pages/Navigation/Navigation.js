@@ -39,15 +39,15 @@ const Navigation = () => {
         <div className="header">
             <div className="nav_wrapper">
             <div className="logo">
-                <h2>Bayorr</h2>
-                <h2 className="marked">Code</h2>
+                <p>Bayorr</p>
+                <p className="marked">Code</p>
             </div>
             <ul className="Navlinks">
                 {
-                    navItems.map((navItem, index) => {
+                    navItems.map((navItem, i) => {
                         return (
-                            <li key={index}>
-                                <a href={`${navItem}`}> {navItem}</a>
+                            <li key={i}>
+                                <a href={`#${navItem}`}> {navItem}</a>
                             </li>
                         )
                     })
@@ -84,9 +84,12 @@ const Navigation = () => {
                 <GrClose onClick= {() => {
                     setToggle(false) 
                 }}/>
-                {navItems.map((navItem, index) => {
-                    return <li key={index}>
-                        <a href={`${navItem}`}>{navItem}</a>
+                {navItems.map((navItem, i) => {
+                    return <li key={i}
+                               onClick={() => {
+                                setToggle(false)
+                            }}>
+                        <a href={`#${navItem}`}>{navItem}</a>
                     </li>
                 })}
 
