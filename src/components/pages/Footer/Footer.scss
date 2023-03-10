@@ -1,0 +1,53 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+    color: #0e0e0e;
+    max-width: 800px;
+    padding: 1rem 3.4rem;
+    margin: 1rem auto;
+
+    .copyright {
+        margin-bottom: .8rem;
+        p {
+            font-size: .9rem;
+
+            span {
+                color: #61d133;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .social-connect {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        h4 {
+            font-size: .9rem;
+        }
+        .stick {
+            height: 2px;
+            width: 3rem;
+            background: #61d133;
+        }
+
+        .platform {
+            display: flex;
+            gap: .8rem;
+
+            svg {
+                font-size: 1.4rem;
+                opacity: .7;
+                transition: .4s ease;
+
+                &:hover, &:active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

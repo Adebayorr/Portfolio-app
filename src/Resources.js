@@ -27,7 +27,7 @@ export const connects = [
     <FaLinkedin />,
 ]
 
-export const bios = [
+export const myBios = [
   {
     id: 1,
     icon: <FaUser />,
@@ -50,45 +50,45 @@ export const bios = [
 
 export const icons = [<FaHtml5 />, <FaCss3 />, <DiJavascript />, <SiWebflow />, <FaReact />, <FaNodeJs />, <FaSass />, <FaFigma />]
 
-export const experiences = [
+export const workHistory = [
   {
     id: 1,
     year: "2022",
-    position: "Senior Web Developer",
+    post: "Senior Web Developer",
     company: "shop.com.mm"
   },
   {
-    di: 2,
+    id: 2,
     year: "2021",
-    position: "Junior Web Developer",
+    post: "Junior Web Developer",
     company: "shop.com.mm"
   },
   {
     id: 3,
     year: "2019",
-    position: "Intern Web Dveloper",
+    post: "Intern Web Dveloper",
     company: "shop.com.mm"
   }
 ]
-export const finishes = [
+export const completions = [
   {
     id: 1,
-    number: '6+',
+    number: '02+',
     itemName: "Years Of Experience"
   },
   {
     id: 2,
-    number: "150+",
+    number: "004+",
     itemName: "Satisfied Customers"
   },
   {
     id: 3,
-    number: "669+",
+    number: "069+",
     itemName: "Designed Items"
   },
   {
     id: 4,
-    number: "117+",
+    number: "005+",
     itemName: "Clients Served"
   }
 ]

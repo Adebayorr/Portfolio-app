@@ -1,7 +1,11 @@
-.wrapper {
+.home-wrapper {
     display:flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
 
     .me {
         width: 8.5rem;
@@ -23,10 +27,10 @@
         margin: 1.3rem 0 0 0;
 
         h3 {
-            font-size: 1.8rem;
+            font-size: 1.3rem;
 
             @media (min-width: 700px) {
-                font-size: 1.4rem;
+                font-size: 1.6rem;
             }
 
             span {
@@ -42,8 +46,71 @@
 
     .subtitle {
         margin-top: 1.6rem;
-        font-size: 4.8rem;
-        line-height: 1.2;
+        font-size: 1.7rem;
+        line-height: 1.4;
         text-align: center;
+        font-family: "Merriweather", sans-serif;
+        font-weight: bold;
+
+        @media (min-width: 550px) {
+            font-size: 2.2rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 800px) {
+            font-size: 4rem;
+            margin-top: 2rem;
+        }
+    }
+    .cta_btn {
+        margin-top: 1.6rem;
+        text-decoration: none;
+        color: #fff;
+        // text-transform: uppercase;
+        border-radius: .3rem;
+        padding: .5rem 1rem;
+        width: 160px;
+        text-align: center;
+        background: #0e0e0e;
+        font-weight: bold;
+    }
+
+    .free {
+        position: absolute;
+        color: #fff;
+        padding: .3rem .8rem;
+        border-radius: 1.5rem;
+        font-size: .8rem;
+        background: #0e0e0ec2;
+    }
+
+    .webdev {
+        display: none;
+        @media (min-width: 800px) {
+            display: block;
+            top: 13rem;
+            right: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    .webflow {
+        display: none;
+        @media (min-width: 800px) {
+            display: block;
+            top: 11rem;
+            left: 2.2rem;
+            cursor: pointer;
+        }
+    }
+
+    .freelance {
+        display: none;
+        @media (min-width: 800px) {
+            display: block;
+            bottom: 1.9rem;
+            left: 1.4rem;
+            cursor: pointer;
+        }
     }
 }

@@ -1,0 +1,103 @@
+.about-wrapper {
+    padding: 3rem;
+
+    @media (min-width: 800px) {
+        padding: 3rem;
+    }
+
+}
+
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    padding-top: 2rem;
+    
+    @media (min-width: 800px){ 
+        flex-direction: row;
+        align-items: center;
+    }
+
+    div {
+        width: 100%;
+
+        @media (min-width: 800px) {
+            width: 50%;
+        }
+    }
+
+    .sideone {
+        // background: url('../../../assets/pp2.png');
+        // background-size: cover;
+        // background-position: 0 -60px;
+        // background: #61d133;
+        width: 222px;
+        min-width: 222px;
+        height: 300px;
+        box-shadow: 0 0 25px rgba($color: #61d133, $alpha: 1);
+        border-radius: 1rem;
+        margin-right: auto;
+        margin-left: auto;
+
+        @media (min-width: 800px){ 
+            width: 252px;
+        }
+
+        img {
+            width: 100%;
+            // margin: 0 auto;
+            height: 100%;
+            border-radius: 1rem;
+            object-fit: cover;
+        }
+    }
+
+    .sidetwo {
+        margin-top: 1rem;
+        // min-width: 266px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem;
+
+        @media (min-width: 800px){ 
+            width: 50%;
+            // margin-left: 5%;
+            
+        }
+        .about-me_desc {
+            font-size: .9rem;
+            width: 100%;
+            margin-bottom: .7rem;
+        }
+
+        .mybio {
+            display: flex;
+            font-size: .9rem;
+            max-width: 130px;
+            margin-top: .7rem;
+
+            .key {
+                display: flex;
+                align-items: center;
+                margin-right: 1.3rem;
+                gap: .3rem;
+               
+            }
+        }
+
+        .download {
+            margin-top: 1.6rem;
+            padding: .5rem 1rem;
+            background: #0e0e0e;
+            border-radius: .3rem;
+            color: #ffffff;
+            text-decoration: none;
+            width: 190px;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+}

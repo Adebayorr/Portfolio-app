@@ -1,12 +1,28 @@
 import React from "react"
 import "./Homepage.scss"
 import pp1 from "../../../assets/pp1.png"
+import {motion} from "framer-motion"
 
 
 const Homepage = () => {
-    return <div
-    className="wrapper"
-    id="homepage">        
+
+    const moveVariants = {
+        animation: {
+            y: [0, -15],
+            transition: {
+                yoyo: Infinity,
+                duration: 2,
+                delay: 1,
+            }
+        }
+    }
+    return (
+        <motion.div
+        initial={{y: -16, opacity: 0.3}}
+        animate={{y: 0, opacity: 1}}
+        transition={{duration: 1.5, delay: 0.6}}
+        className="home-wrapper wrapper"
+        id="home">        
         <div className="me">
         <img src={pp1} alt="profile-shot"></img>
         </div>
@@ -21,18 +37,22 @@ const Homepage = () => {
             Webflow Developer/Web Developer
         </article>
         <article className="subtitle">
-            technical Know-how <br/>
+            Technical Know-how <br/>
             Bring life to your project <br />
-            You're in the right place
         </article>
-        <a href="contact">
+        <motion.a className="cta_btn" href="contact"
+        variants={moveVariants}
+        animate="animation"
+        whileHover={{scale: 1.07}}
+        transition={{duration: 0.25}}>
             Hit Me Up!
-        </a>
-        <div className="web">Web Developer</div>
-        <div className="ui">Webflow Designer</div>
-        <div className="web">Freelancer</div>
-    </div>
+        </motion.a>
+        <div className="free webdev">Web Developer</div>
+        <div className="free webflow">Webflow Designer</div>
+        <div className="free freelance">Freelancer</div>
+    </motion.div>
 
+    )
 }
 
 export default Homepage

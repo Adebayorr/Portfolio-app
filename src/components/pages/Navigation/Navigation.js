@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState , useEffect} from "react"
 import './Navigation.scss'
 import { navItems } from "../../../Resources"
 import { connects } from "../../../Resources"
@@ -8,6 +8,7 @@ import {motion} from "framer-motion"
 
 const Navigation = () => {
     const [toggle, setToggle] = useState(false)
+    const [scroll, setScroll] = useState(false)
 
     const menuVariants = {
         hidden : {
@@ -35,8 +36,18 @@ const Navigation = () => {
             }
         }
     }
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll(window.scrollY > 20)
+        }) 
+    },[])
     return (
-        <div className="header">
+        <motion.div 
+        initial={{y: -24}}
+        animate={{y: -5}}
+        transition={{duration: 0.6}}
+        className={scroll ? "header active" : "header"}>
             <div className="nav_wrapper">
             <div className="logo">
                 <p>Bayorr</p>
@@ -95,7 +106,7 @@ const Navigation = () => {
 
             </motion.div>
         </div>
-        </div>
+        </motion.div>
     )
 
 }

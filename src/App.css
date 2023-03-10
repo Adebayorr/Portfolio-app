@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Josefin+Sans:wght@300;400;500&family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&family=Orbitron:wght@400;500;600;700&family=Tilt+Neon&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +7,33 @@
   /* font-size: 16px; */
 }
 
+.App {
+  padding-top: 60px;
+}
+
 
 .wrapper {
   min-height: 400px;
-  margin-top: 80px;
+  margin-top: 40px;
 }
+
+
+.AH p {
+      font-size: .7rem;
+      color: #61d133;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+  }
+  .AH h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      @media (min-width: 800px) {
+          font-size: 3rem;
+      }
+  }
+  
+
+
+
 
